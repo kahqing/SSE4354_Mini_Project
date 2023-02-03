@@ -9,36 +9,6 @@ import javax.mail.internet.MimeMessage;
 public class TestSendEmail {
 
 	public static void sendEmail(String email, String otp) {
-		  /*Properties properties = new Properties();
-		  properties = System.getProperties();
-		  properties.put("mail.smtp.host", "smtp.gmail.com");
-		  properties.put("mail.smtp.port", "465");
-		  properties.put("mail.smtp.auth", "true");
-		  properties.put("mail.smtp.ssl.enable", "true");
-	        
-	        Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
-	        	   protected PasswordAuthentication getPasswordAuthentication() {
-	        		    return new PasswordAuthentication("kahqing.chong@gmail.com", 
-	        		    		"tygiibrkxqwdbzbg");
-	        		   }
-	        		  });
-	        session.setDebug(true);
-	        try {
-	            Message message = new MimeMessage(session);
-	            message.setFrom(new InternetAddress("kahqing.chong@gmail.com"));
-	            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email));
-	            message.setSubject("Top Up Payment");
-	            message.setText("Dear customer!This is an verification email"
-	            		+ "from Bank A. Your OTP: " + otp);
-
-	            Transport tr = session.getTransport();
-	          
-	            tr.sendMessage(message, message.getAllRecipients());
-	            
-	            System.out.println("Email sent successfully.");
-	        } catch (MessagingException e) {
-	            throw new RuntimeException(e);
-	        }*/
 	        
 		Properties properties = new Properties();
 		  properties = System.getProperties();
@@ -49,8 +19,8 @@ public class TestSendEmail {
 	        
 	        Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
 	        	   protected PasswordAuthentication getPasswordAuthentication() {
-	        		    return new PasswordAuthentication("kahqing.chong@gmail.com", 
-	        		    		"tygiibrkxqwdbzbg");
+	        		    return new PasswordAuthentication("", 
+	        		    		"");
 	        		   }
 	        		  });
 	        session.setDebug(true);
@@ -72,6 +42,6 @@ public class TestSendEmail {
 }
 	public static void main(String[] args) {
 		
-		sendEmail("kahqing.chong@gmail.com","123456");
+		sendEmail("","123456");
 	}
 }
